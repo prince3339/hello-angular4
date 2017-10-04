@@ -4,5 +4,19 @@
 
 <input type="text" 
        [(ngModel)] = "item">
+<button (click) = addNewItem()
+        class="btn"
+        [ngClass] = "{'btn-primary': item !== '', 'btn-default': item === ''}">
+        Add Item
+</button>
+<p *ngIf = "item === ''">Please enter a value!</p>
 
-<button (click) = addNewItem()>Add Item</button>
+<hr>
+
+<ul class="list-group">
+  <li class="list-group-item" 
+      *ngFor = "let item of items; let i = index"
+      [ngStyle] = "{ backgroundColor: i % 2 === 0? 'red': 'orange'}">
+    {{ item }}
+  </li>
+</ul>

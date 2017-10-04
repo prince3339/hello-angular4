@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   rootName = 'Sabbir Ahmed';
-  allItems = ['Apples', 'Bananas', 'Cherries'];
+  rootItems = ['Apples', 'Bananas', 'Cherries'];
 
   onNameChanged(newName) {
     this.rootName = newName;
   }
   addNewItems(newItem) {
-    this.allItems.push(newItem);
-    console.log(this.allItems);
+    this.rootItems.push(newItem);
+    console.log(this.rootItems);
   }
 }

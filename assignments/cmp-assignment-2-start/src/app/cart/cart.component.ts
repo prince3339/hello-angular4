@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter, Injectable } from '@ang
 export class CartComponent implements OnInit {
   //items = [];
   newItem = "";
-  item;
+  item = "";
 
   constructor() { }
 
